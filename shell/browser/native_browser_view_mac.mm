@@ -133,13 +133,12 @@ const NSAutoresizingMaskOptions kDefaultAutoResizingMask =
   [self.window setFrameOrigin:newOrigin];
 }
 
-// For debugging purposes only.
-- (void)drawRect:(NSRect)aRect {
-  if (getenv("ELECTRON_DEBUG_DRAG_REGIONS")) {
-    [[[NSColor greenColor] colorWithAlphaComponent:0.5] set];
-    NSRectFill([self bounds]);
-  }
-}
+// For debugging purposes only. Do *not* uncomment this unless using it
+// as it is very consumptive and will cause BrowserView rendering slowdowns.
+// - (void)drawRect:(NSRect)aRect {
+//   [[[NSColor greenColor] colorWithAlphaComponent:0.5] set];
+//   NSRectFill([self bounds]);
+// }
 
 @end
 
@@ -152,13 +151,12 @@ const NSAutoresizingMaskOptions kDefaultAutoResizingMask =
   return NO;
 }
 
-// For debugging purposes only.
-- (void)drawRect:(NSRect)aRect {
-  if (getenv("ELECTRON_DEBUG_DRAG_REGIONS")) {
-    [[[NSColor redColor] colorWithAlphaComponent:0.5] set];
-    NSRectFill([self bounds]);
-  }
-}
+// For debugging purposes only. Do *not* uncomment this unless using it
+// as it is very consumptive and will cause BrowserView rendering slowdowns.
+// - (void)drawRect:(NSRect)aRect {
+//   [[[NSColor redColor] colorWithAlphaComponent:0.5] set];
+//   NSRectFill([self bounds]);
+// }
 
 @end
 
