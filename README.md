@@ -32,6 +32,7 @@ npm install electron --save-dev
 ```
 
 For more installation options and troubleshooting tips, see
+#1
 [installation](docs/tutorial/installation.md). For info on how to manage Electron versions in your apps, see
 [Electron versioning](docs/tutorial/electron-versioning.md).
 
